@@ -13,9 +13,7 @@
 	 	<input type="text" name="Address"><br>
 	Age:<br>
 	 	<input type="text" name="Age"><br> 	
-	Department:<br>
-	 	<input type="text" name="Department"><br> 
-	 
+		 
 
 >>>>>>> 6f8301360108198e857e15be5d0c137cf2720114
 	
