@@ -7,7 +7,8 @@
 	 	<input type="text" name="firstname"><br>
         Gender:<br>
                 <input type="text" name="Gender"><br>  
-	
+        Department:<br>
+                <input type="text" name="Department\"><br>	
 </form> 
 
 </body>
