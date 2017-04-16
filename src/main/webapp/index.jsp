@@ -13,9 +13,7 @@
                 <input type="text" name="Age"><br>
         Gender:<br>
                 <input type="text" name="Gender"><br>  
-        Department:<br>
-                <input type="text" name="Department\"><br>	
-
+        
 </form> 
 
   </h3> All fields are mandatory </h3>
