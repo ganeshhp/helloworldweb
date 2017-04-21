@@ -1,6 +1,7 @@
 <html>
 <body>
-	<h2>Hello World!</h2>
+	<h1>Hello World!</h1>
+	<h2> This is a Test page for demonstrating Jenkins Integration</h2>
 		
 <form>
 	First name:<br>
@@ -10,13 +11,14 @@
         Address:<br>
                 <input type="text" name="Address"><br>
         Age:<br>
-                <input type="text" name="Age"><br>
+                <input type="number" name="Age"><br>
         Gender:<br>
                 <input type="text" name="Gender"><br>  
-        
+		Department:<br>
+				<input type="text" name="Department"><br>       
 </form> 
 
-  </h3> All fields are mandatory </h3>
+  </h2> All fields are mandatory </h2>
 </body>
 
 </html>
