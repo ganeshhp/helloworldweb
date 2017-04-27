@@ -2,6 +2,8 @@
 <body>
 	<h1>Hello World!</h1>
 	<h2> This is a Test page for demonstrating Jenkins Integration</h2>
+
+	<h2> A new lne is added for testing the pipeline job </h2>
 		
 <form>
 	First name:<br>
