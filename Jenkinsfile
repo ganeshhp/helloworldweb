@@ -1,16 +1,9 @@
 node {
-   
-   stage('SCM') { 
-        build 'SCM'
-   }
-
-   stage('Build') {
-        build 'build'
-   }  
-
-   stage('deploy') {
-        build 'TOMCAT-deployment'
-   }
-
-    
+      stage('SCM')
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
+      stage('Build') 
+        sh 'mvn -f pom.xml clean package'
+      stage('deploy')
+        archiveArtifacts 'target/*.war'
+     
 }
