@@ -6,7 +6,7 @@ checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleC
 }
 
 stage ('build') {
-sh 'mvn -f pom.xml clean package'
+bat 'mvn -f pom.xml clean package'
 
 }
 
