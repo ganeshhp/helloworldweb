@@ -1,4 +1,4 @@
-node {
+node('Jenkinsnode') {
 
 stage ('scm') {
 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
@@ -6,7 +6,7 @@ checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleC
 }
 
 stage ('build') {
-bat 'mvn -f pom.xml clean package'
+sh 'mvn -f pom.xml clean package'
 
 }
 
