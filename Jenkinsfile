@@ -14,4 +14,8 @@ stage ('archive') {
 archiveArtifacts 'target/*.war'
 }
 
+stage ('deploy') {
+sh 'cp target/*war /opt/tomcat/webapps/'
+}
+
 }
