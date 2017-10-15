@@ -1,5 +1,4 @@
 node {
-
 stage ('scm') {
 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
 
@@ -15,7 +14,6 @@ archiveArtifacts 'target/*.war'
 }
 
 stage ('deploy') {
-sh 'cp target/*war /opt/tomcat/webapps/'
+sh 'cp target/*war /opt/apache-tomcat-8.5.21/webapps/'
 }
-
 }
