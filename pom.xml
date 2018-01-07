@@ -4,7 +4,7 @@
   <groupId>com.autofact</groupId>
   <artifactId>Helloworldwebapp</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1-test</version>
   <name>Helloworldwebapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -16,7 +16,7 @@
 </dependency>
   </dependencies>
   <build>
-    <finalName>Helloworldwebapp</finalName>
+    <finalName>Helloworldwebapp-release-1.0.1</finalName>
   </build>
 </project>
 
