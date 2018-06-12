@@ -1,4 +1,4 @@
-node 'tomcat_server' {
+node {
 
 stage ('SCM_checkout') {
 	checkout([$class: 'GitSCM', 
