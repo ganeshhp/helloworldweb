@@ -13,7 +13,7 @@
                 <input type="number" name="Age"><br>
 </form> 
 
-  </h2> All fields are mandatory </h2>
+  </h2> All fields are optional </h2>
 </body>
 
 </html>
