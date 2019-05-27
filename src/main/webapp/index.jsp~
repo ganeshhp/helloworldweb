@@ -1,6 +1,10 @@
 <html>
 <body>
-	<h1>Hello World!</h1>
+<<<<<<< HEAD
+	<h1>Hello World!!!! Welcome!!!</h1>
+=======
+	<h1>Hello World for test case</h1>
+>>>>>>> 25893d612278ffb299e87a9613a540f00aaaf0c9
 	<h2> This is a Test page for demonstrating CI and CD with Continuous Integration</h2>
 <form>
 	First name:<br>
