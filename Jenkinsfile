@@ -1,4 +1,4 @@
-node {
+node 'prod-server' {
 
 stage ('SCM_checkout') {
 	checkout([$class: 'GitSCM', 
