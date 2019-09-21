@@ -15,9 +15,10 @@
     <scope>test</scope>
 </dependency>
   </dependencies>
-  <profile>
-		<id>sonar</id>
-		<activation>
+    <profiles>
+	<profile>
+	<id>sonar</id>
+	    <activation>
 		<activeByDefault>true</activeByDefault>
 		</activation>
 		<properties>
