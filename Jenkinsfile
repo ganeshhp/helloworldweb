@@ -1,6 +1,7 @@
 node {
-
-stage ('SCM_checkout') {
+ parallel {
+  stage ('SCM_checkout') {
+    
 	checkout([$class: 'GitSCM', 
 		branches: [[name: '*/master']], 
 		doGenerateSubmoduleConfigurations: false, 
@@ -8,7 +9,15 @@ stage ('SCM_checkout') {
 		submoduleCfg: [], 
 		userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
 	}
-
+  stage ('SCM_checkout-webapp') {
+    
+	checkout([$class: 'GitSCM', 
+		branches: [[name: '*/master']], 
+		doGenerateSubmoduleConfigurations: false, 
+		extensions: [], 
+		submoduleCfg: [], 
+		userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldapp.git']]])
+	}
 stage ('Build') {
 	sh 'mvn clean package'
 	}
