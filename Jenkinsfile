@@ -8,7 +8,7 @@ node {
 		userRemoteConfigs: [[url: 'C:\\Project\\helloworldweb']]])
   }
 
- stage ('build') {  
+ stage ('build on windows') {  
 	bat label: '', script: 'mvn clean package'
   }
   
