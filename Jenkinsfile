@@ -12,7 +12,7 @@ node {
 	bat label: '', script: 'mvn clean package'
   }
   
-  stage ('archive') {
+  stage ('archive and deploy') {
 	archiveArtifacts 'target/*.war'
   }
   
