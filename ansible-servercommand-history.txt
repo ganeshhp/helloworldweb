@@ -1,0 +1,102 @@
+    1  clear
+    2  ls
+    3  cd /etc/ansible/
+    4  ll
+    5  cd roles/
+    6  ll
+    7  cd webserver/
+    8  tree
+    9  vi tasks/main.yml 
+   10  sudo vi tasks/main.yml 
+   11  cd ../..
+   12  cd roles/webserver/
+   13  vi tasks/main.yml 
+   14  cd ../..
+   15  cd hosts
+   16  vi hosts
+   17  ll
+   18  vi playbook.yml
+   19  sudo vi playbook.yml
+   20  clear
+   21  ansible-playbook playbook.yml
+   22  ansible-playbook playbook.yml -k
+   23  cd ~
+   24  ls -la
+   25  cd .ssh/
+   26  ll
+   27  ssh-keygen
+   28  cd /etc/ansible/
+   29  ll
+   30  ansible-playbook playbook.yml -k
+   31  cd roles/webserver/tasks/
+   32  ll
+   33  vi main.yml 
+   34  sudo vi main.yml 
+   35  cd ../..
+   36  cd ..
+   37  ansible-playbook playbook.yml -k
+   38  sudo vi roles/webserver/tasks/main.yml 
+   39  sudo vi roles/webserver/handlers/main.yml 
+   40  sudo vi roles/webserver/tasks/main.yml 
+   41  sudo vi roles/webserver/handlers/main.yml 
+   42  clear
+   43  ansible-playbook playbook.yml -k
+   44  cd ..
+   45  cd an
+   46  cd ansible/
+   47  ll
+   48  clear
+   49  ansible-vaults
+   50  ansible-vault
+   51  clear
+   52  ansible 10.128.0.15 -i hosts -m user -a "name=user20 password=password123 state=present" --become -k
+   53  sudo vi hosts 
+   54  ansible 10.128.0.15 -i hosts -m user -a "name=user20 password=password123 state=present" --become -k
+   55  ansible-vault create hosts
+   56  ansible-vault create vars.yml
+   57  ll
+   58  ansible-vault create varriabes.yml
+   59  sudo ansible-vault create varriabes.yml
+   60  ll
+   61  vi varriabes.yml 
+   62  sudo vi varriabes.yml 
+   63  sudo vi varriabes.yml clear
+   64  ll
+   65  clear
+   66  ll
+   67  ansible-vault encrypt hosts
+   68  sudo ansible-vault encrypt hosts
+   69  vi hosts
+   70  sudo vi hosts
+   71  ansible 10.128.0.15 -i hosts -m user -a "name=user20 password=password123 state=present" --become -k --ask-vault-pass
+   72  ll
+   73  clear
+   74  lear
+   75  clear
+   76  cd ~
+   77  git clone https://github.com/ganeshhp/helloworldweb.git
+   78  cd helloworldweb/
+   79  ll
+   80  cd target/
+   81  ll
+   82  clear
+   83  wget https://tomcat.apache.org/download-80.cgi#8.5.50
+   84  sudo yum install wget
+   85  wget https://tomcat.apache.org/download-80.cgi#8.5.50
+   86  wget http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz
+   87  ll
+   88  tar -xvf apache-tomcat-8.5.50.tar.gz 
+   89  sudo mv apache-tomcat-8.5.50 /opt/tomcat
+   90  clear
+   91  cd /opt/tomcat/
+   92  ll
+   93  cd bin/
+   94  ll
+   95  clear
+   96  cd ../..
+   97  cd ..
+   98  cd /opt/tomcat/webapps/
+   99  ll
+  100  clear
+  101  history
+  102  history >> ansible-servercommand-history.txt
