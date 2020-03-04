@@ -1,2 +1,6 @@
 target
-
+*.log
+*.bin
+*.war
+*.jar
+*.exe
