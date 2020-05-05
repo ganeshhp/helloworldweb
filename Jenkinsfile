@@ -1,4 +1,4 @@
-node('master') {
+node('node1') {
 
 	stage('git-checkout') {
 		checkout changelog: false, 
