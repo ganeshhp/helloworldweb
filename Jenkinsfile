@@ -1,4 +1,4 @@
-node('node1') {
+node('appserver') {
 
 	stage('git-checkout') {
 		checkout changelog: false, 
