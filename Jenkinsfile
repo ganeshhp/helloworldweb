@@ -1,6 +1,6 @@
 node ('master') {
-	
-	stage ('SCM_Checkout') {
+  
+  stage ('scm_checkout') {
 	checkout([$class: 'GitSCM', 
 		branches: [[name: '*/master']], 
 		doGenerateSubmoduleConfigurations: false, 
@@ -8,11 +8,12 @@ node ('master') {
 		userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
 	}
 	
-    stage ('build') {	
+  stage ('Build') {
 	sh label: '', script: 'mvn clean package'
     }
 	
-	stage ('archive') {
-	archiveArtifacts 'target/*.war'
+  stage ('archive') {
+	archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
     }
+	
 }
