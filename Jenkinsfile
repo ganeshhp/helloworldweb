@@ -1,19 +1,19 @@
-node('master') {
-
-	stage('git-checkout') {
-		checkout changelog: false, 
-		   scm: [$class: 'GitSCM', 
-		   branches: [[name: '*/master']], 
-		   doGenerateSubmoduleConfigurations: false, 
-		   extensions: [], submoduleCfg: [], 
-		   userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]]
-	   }
-	stage('maven-build') {
-		sh label: '', script: 'mvn clean package'
+node ('master') {
+  
+  stage ('scm_checkout') {
+	checkout([$class: 'GitSCM', 
+		branches: [[name: '*/master']], 
+		doGenerateSubmoduleConfigurations: false, 
+		extensions: [], submoduleCfg: [], 
+		userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
 	}
-
-	stage('archive') {
-
-		archiveArtifacts 'target/*.war'
-	}
+	
+  stage ('Build') {
+	sh label: '', script: 'mvn clean package'
+    }
+	
+  stage ('archive') {
+	archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+    }
+	
 }
