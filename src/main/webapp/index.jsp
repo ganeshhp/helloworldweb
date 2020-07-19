@@ -1,7 +1,6 @@
 <html>
 <body>
-	<h1>Hello World!!!! Welcome to the DevOps Training on 16th march 2020!!!</h1>
-=======
+	<h1>Hello World!!!! Welcome to the DevOps Training on 19th July 2020!!!</h1>
 	<h2> This is a Test page for demonstrating CI and CD with Continuous Integration</h2>
 <form>
 	First name:<br>
