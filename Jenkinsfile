@@ -1,4 +1,4 @@
-node ('appserver) {
+node ('appserver') {
   
   stage ('scm_checkout') {
 	checkout([$class: 'GitSCM', 
