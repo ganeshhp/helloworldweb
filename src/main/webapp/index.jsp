@@ -1,6 +1,6 @@
 <html>
 <body>
-	<h1>Hello World!!!! Welcome to the DevOps Training on 2nd August 2020!!!</h1>
+	<h1>Hello World!!!! Welcome to the DevOps Training on 6th August 2020!!!</h1>
 	<h2> This is a Test page for demonstrating CI and CD with Continuous Integration on Jenkins</h2>
 <form>
 	First name:<br>
