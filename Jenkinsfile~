@@ -1,19 +1,21 @@
-node ('appserver') {
+node ('buildserver') {
   
-  stage ('scm_checkout') {
+  stage ('scm_checkout') {  
 	checkout([$class: 'GitSCM', 
-		branches: [[name: '*/master']], 
-		doGenerateSubmoduleConfigurations: false, 
-		extensions: [], submoduleCfg: [], 
-		userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
+	  branches: [[name: '*/master']], 
+	  doGenerateSubmoduleConfigurations: false, 
+	  extensions: [], submoduleCfg: [], 
+	  userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
+	
 	}
-	
-  stage ('Build') {
-	sh label: '', script: 'mvn clean package'
-    }
-	
+  input 'proceed with build ?'
+  
+  stage ('build') {
+
+	sh label: '', script: 'mvn clean install'
+	}
   stage ('archive') {
 	archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
-    }
-	
+	}
 }
+
