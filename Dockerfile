@@ -1,4 +1,4 @@
-FROM ganeshhp/tomcat:9.0
+FROM ganeshhp/tomcat9:custom
 
 ADD ./Helloworldwebapp.war /opt/tomcat/webapps/
 
