@@ -1,6 +1,6 @@
 <html>
 <body>
-	<h1>!!! Welcome to the DevOps Training on 3rd Sept 2020!!!</h1>
+	<h1>!!! Welcome to the DevOps Training on 4th October 2020!!!</h1>
 	<h2> This is a Test page for demonstrating CI and CD with Continuous Integration</h2>
 <form>
 	First name:<br>
