@@ -1,6 +1,6 @@
 <html>
 <body>
-	<h1>!!! Welcome to the DevOps Training conducted on 1st December 2020!!!</h1>
+	<h1>!!! Welcome to the DevOps Training conducted on 27th December 2020!!!</h1>
 	<h2> This is a Test page for demonstrating CI and CD with Jenkins CI Server on cloud</h2>
 <form>
 	First name:<br>
