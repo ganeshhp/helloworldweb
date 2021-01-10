@@ -1,6 +1,6 @@
 <html>
 <body>
-	<h1>!!! Welcome to the DevOps Training on 10th January 2021</h1>
+	<h1>!!! Welcome to the DevOps Training on 10th January 2021!!!</h1>
 	<h2> This is a Test page for demonstrating CI and CD with Jenkins CI Server on cloud</h2>
 <form>
 	First name:<br>
@@ -13,7 +13,6 @@
                 <input type="number" name="Age"><br>
 </form> 
 
-  <h2> All fields are optional and mandatory</h2>
 </body>
 
 </html>
