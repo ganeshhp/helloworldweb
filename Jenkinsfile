@@ -12,7 +12,7 @@ node ('buildserver') {
  stage ('build') {
     sh 'mvn clean install'
  }
- email 
+
  input 'do you want proceed with archival'
 
  stage ('archive') {
