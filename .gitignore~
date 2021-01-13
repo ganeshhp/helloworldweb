@@ -4,4 +4,4 @@ target
 *.jar
 *.exe
 *.un~
-
+*.*~
