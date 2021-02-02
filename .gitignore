@@ -3,6 +3,5 @@ target
 *.bin
 *.jar
 *.exe
-*.un~
 *.doc
 
