@@ -1,5 +1,5 @@
 
-node ('master') {
+node ('buildserver') {
 
   stage ('SCM') {  
       checkout changelog: false, 
