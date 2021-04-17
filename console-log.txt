@@ -1,0 +1,50 @@
+    1  clear
+    2  hostname
+    3  exit
+    4  sudo yum install git
+    5  clear
+    6  git
+    7  clear
+    8  mkdir project
+    9  cd project/
+   10  ls -la
+   11  git init
+   12  ls -la
+   13  git status
+   14  echo "hello world" >> index.html
+   15  ls
+   16  git status
+   17  git add index.html 
+   18  git status
+   19  cd .git/
+   20  ls
+   21  ll
+   22  cd objects/
+   23  ls
+   24  ll
+   25  cd ../..
+   26  git commit -m "home page file"
+   27  cd .git/objects/
+   28  ll
+   29  cd ../..
+   30  clear
+   31  git log
+   32  git commit -m "new cange"
+   33  git cat-file 0e6b3e6aa730f2268238bb0d4d71e376ec46d8f4
+   34  git cat-file 0e6b3e6aa730f2268238bb0d4d71e376ec46d8f4 -p
+   35  git cat-file ff46f55ec679bb30e1b2291bf56558ec435b1df3 -p
+   36  git cat-file 3b18e512dba79e4c8300dd08aeb37f8e728b8dad -p
+   37  clear
+   38  echo "welcome" >> index.html
+   39  git status
+   40  git commit -am "new changes"
+   41  git status
+   42  git log
+   43  git config --global user.name "ganeshhp"
+   44  git config --global user.email "ganeshhp@gmail.com"
+   45  clear
+   46  cd ~
+   47  ls -la
+   48  cat .gitconfig
+   49  history
+   50  history >> console-log.txt
