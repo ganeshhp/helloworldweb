@@ -1,7 +1,0 @@
-target
-*.log
-*.bin
-*.jar
-*.exe
-*.un~
-*.*~
