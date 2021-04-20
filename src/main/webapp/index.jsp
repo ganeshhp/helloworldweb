@@ -1,22 +1,9 @@
 <!DOCTYPE html>
 <html>
 <body>
-        
-        <p>Click the button to display the hostname of the current URL.</p>
-        
-        <button onclick="myFunction()">Try it</button>
-        
-        <p id="demo"></p>
-        
-        <script>
-        function myFunction() {
-          var x = location.hostname;
-          document.getElementById("demo").innerHTML= x;
-        }
-        </script>
-        
-        <h1>!!! Welcome to the DevOps fundamentals Training on 4th February 2021!!!</h1>
-	<h2> This is a Test page for demonstrating CI and CD with Jenkins CI Server on cloud</h2>
+
+	<h1>!!! Welcome to the DevOps Training conducted on 11th October 2020!!!</h1>
+
 <form>
 	First name:<br>
 	 	<input type="text" name="firstname"><br>
