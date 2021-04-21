@@ -5,7 +5,7 @@
 
 	<h2> This is a Test page for demonstrating CI and CD with Jenkins CI Server on cloud</h2>
 
-	<h1>!!! Welcome to the DevOps Training conducted on 11th October 2020!!!</h1>
+	<h1>!!! Welcome to the DevOps Training conducted on 21st April 2021!!!</h1>
 
 
 <form>

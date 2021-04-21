@@ -3,7 +3,7 @@
  <modelVersion>4.0.0</modelVersion>
   <groupId>com.autofact</groupId>
   <artifactId>Helloworldwebapp</artifactId>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <version>0.0.2</version>
   <name>Helloworldwebapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
