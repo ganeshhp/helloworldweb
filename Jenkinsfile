@@ -2,7 +2,7 @@ pipeline {
     agent none 
     stages {
         stage('SCM_Chekout') {
-            agent 'master' 
+            agent master 
             steps { 
                 checkout([$class: 'GitSCM', 
                     branches: [[name: '*/master']], 
@@ -13,13 +13,13 @@ pipeline {
             }
         }
         stage('Build'){
-            agent 'master'
+            agent master
             steps {
                 sh 'mvn -f pom.xml clean package' 
             }
         }
         stage('Deploy') {
-            agent 'master'
+            agent master
             steps {
                 sh 'cp target/*.war /opt/tomcat/webapps/'
                 sh '/opt/tomcat/bin/catalina.sh run'
