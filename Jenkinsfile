@@ -13,7 +13,7 @@ pipeline {
             }
         }
         stage('Build'){
-            agent {label 'buildserver'}
+            agent {label 'master'}
             steps {
                 sh 'mvn -f pom.xml clean package' 
             }
