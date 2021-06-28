@@ -2,7 +2,7 @@ pipeline {
     agent none 
     stages {
         stage('SCM_Chekout') {
-            agent { label 'master'} 
+            agent {label 'master'} 
             steps { 
                 checkout([$class: 'GitSCM', 
                     branches: [[name: '*/master']], 
