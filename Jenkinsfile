@@ -18,8 +18,19 @@ pipeline {
                 sh 'mvn -f pom.xml clean package' 
             }
         }
+        stage('download from github') {
+            agent {label 'appserver'}
+            steps {
+                checkout([$class: 'GitSCM', 
+                    branches: [[name: '*/master']], 
+                    doGenerateSubmoduleConfigurations: false, 
+                    extensions: [], 
+                    submoduleCfg: [], 
+                    userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
+            }
+        }
         stage('Deploy') {
-            agent {label 'master'}
+            agent {label 'appserver'}
             steps {
                 sh 'cp target/*.war /opt/tomcat/webapps/'
                 sh '/opt/tomcat/bin/catalina.sh run'
