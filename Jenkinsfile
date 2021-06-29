@@ -33,7 +33,7 @@ pipeline {
             agent {label 'appserver'}
             steps {
                 sh 'cp target/*.war /opt/tomcat/webapps/'
-                sh '/opt/tomcat/bin/catalina.sh run'
+                sh 'sudo nohup /opt/tomcat/bin/startup.sh'
 
             }
         }
