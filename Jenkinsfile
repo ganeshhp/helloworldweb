@@ -15,11 +15,11 @@ pipeline {
         stage('Build'){
             agent {label 'master'}
             steps {
-                sh 'mvn -f pom.xml clean package' 
+                bat 'mvn -f pom.xml clean package' 
             }
         }
         stage('download from github') {
-            agent {label 'appserver'}
+            agent {label 'tomcat'}
             steps {
                 checkout([$class: 'GitSCM', 
                     branches: [[name: '*/master']], 
@@ -30,7 +30,7 @@ pipeline {
             }
         }
         stage('Deploy') {
-            agent {label 'appserver'}
+            agent {label 'tomcat'}
             steps {
                 sh 'cp target/*.war /opt/tomcat/webapps/'
                 sh 'sudo nohup /opt/tomcat/bin/startup.sh'
