@@ -1,6 +1,6 @@
 
 pipeline { 
-    agent none 
+    agent none
     stages {
         stage('SCM_Chekout') {
             agent {label 'master'} 
@@ -11,7 +11,7 @@ pipeline {
                     extensions: [], 
                     submoduleCfg: [], 
                     userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
-            }
+                }
         }
         stage('Build'){
             agent {label 'master'}
@@ -19,5 +19,13 @@ pipeline {
                 bat 'mvn -f pom.xml clean package' 
             }
         }
-     }
+         
+        stage ('pushtoArtifactoiry') {
+            agent {label 'master'}
+            steps {
+                curl -uuser1:APEkqK6UcRQmCrj4AeR2DMkoMe -T target/Helloworldwebapp-dev.war "https://autofact.jfrog.io/artifactory/bankapp/Helloworldwebapp-dev.git"
+            }
+        }
+    }
+    
 }
