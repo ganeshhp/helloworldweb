@@ -11,9 +11,16 @@
 <dependency>
   <groupId>junit</groupId>
     <artifactId>junit</artifactId>
-    <version>4.12</version>
+    <version>4.13</version>
     <scope>test</scope>
 </dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>6.9.1</version>
+</dependency>
+
   </dependencies>
     <profiles>
 	<profile>
@@ -31,7 +38,16 @@
 	</profiles>
   <build>
     <finalName>Helloworldwebapp-dev</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <release>10</release>
+        </configuration>
+      </plugin>
+    </plugins>  
   </build>
-  
 </project>
 
