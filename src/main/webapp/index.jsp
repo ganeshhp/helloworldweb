@@ -2,7 +2,10 @@
 <html>
 <body>
 
-	<h1>!!! Welcome to the DevOps Training conducted on 11th October 2020!!!</h1>
+	<h2> This is a Test page for demonstrating CI and CD with Jenkins for DevOps Training</h2>
+
+	<h1>!!! Welcome to the DevOps Training conducted on 22nd September 2021!!!</h1>
+
 
 <form>
 	First name:<br>
