@@ -13,5 +13,7 @@ node ('buildserver') {
       sh 'mvn clean install'
   }
 
+  input 'Proceed or Abort'
+
 }
 
