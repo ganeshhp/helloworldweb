@@ -6,7 +6,7 @@ node ('buildserver') {
         branches: [[name: '*/master']],
         extensions: [],
         userRemoteConfigs: [[credentialsId: 'plusforum',
-        url: 'https://gitlab.com/ganeshhp/helloworldweb.git']]])
+        url: 'https://github.com/ganeshhp/helloworldweb.git']]])
   }
 
   stage ('maven_build') {
