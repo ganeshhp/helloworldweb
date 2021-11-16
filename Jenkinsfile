@@ -1,4 +1,4 @@
-('master') {
+node ('master') {
 
   stage ('scm_checkout') {  
     checkout([$class: 'GitSCM', 
