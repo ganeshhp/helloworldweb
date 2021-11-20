@@ -1,23 +1,17 @@
 node ('master') {
 
-  stage ('scm_checkout') {  
     checkout([$class: 'GitSCM', 
-            branches: [[name: '*/master']], 
-            extensions: [], 
-            userRemoteConfigs: [[url: 'https://github.com/ganeshhp/Maven-petclinic-project.git']]])
-  }
-
-  stage ('build') {
+        branches: [[name: '*/master']], 
+        extensions: [], 
+        userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
+        
     sh 'mvn clean install'
-  }
-  
-  input 'Proceed with Deployment?'
 
-  stage ('artifactory') {
-     sh 'curl -uganeshhp@gmail.com:AP4g3Wxp8znReDy8f3eVsSqDRjE -T target/petclinic.war "https://plussforum.jfrog.io/artifactory/petclinic-generic-local/petclinic.war"'
-  }
+    sh 'curl -uuser1:AP3wgCK5cmUdGA9uDryy7drWJrB -T target/Helloworldwebapp-dev.war "https://plussforum.jfrog.io/artifactory/helloworldwebapp-generic-local/Helloworldwebapp-dev.war"'
 
-  stage ('archive') {
-    archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
-  }
+    archiveArtifacts artifacts: 'target/Helloworldwebapp-dev.war', 
+        followSymlinks: false
+        
+    sh 'cp target/Helloworldwebapp-dev.war /opt/tomcat/webapps/'
+
 }
