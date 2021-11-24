@@ -1,0 +1,141 @@
+    1  exit
+    2  ifconfig
+    3  vi /etc/ssh/sshd_config 
+    4  sudo vi /etc/ssh/sshd_config 
+    5  service sshd restart
+    6  sudo service sshd restart
+    7  sudo service apache2 status
+    8  exit
+    9  clear
+   10  uname -a
+   11  exit
+   12  clear
+   13  wget https://apt.puppetlabs.com/puppet7-release-bionic.deb
+   14  sudo dpkg -i puppet7-release-bionic.deb 
+   15  sudo apt-get install puppet-server
+   16  sudo apt-get install puppetserver
+   17  sudo apt-get update
+   18  sudo apt-get install puppet-server
+   19  sudo apt-get install puppetserver
+   20  clear
+   21  dpkg -h
+   22  dpkg --help
+   23  sudo dpkg -r puppet7-release-bionic.deb 
+   24  dpkg -l
+   25  sudo dpkg -r puppet7-releas
+   26  sudo dpkg -r puppet7-release
+   27  sudo apt-get update
+   28  clear
+   29  sudo apt-get install ntp
+   30  service ntpd status
+   31  service ntp status
+   32  sudo apt install ntp
+   33  service ntp status
+   34  vi /etc/ntp.conf 
+   35  date
+   36  timedate
+   37  datetimectl
+   38  timedatectl
+   39  timedatectl set-timezone
+   40  timedatectl list-timezones
+   41  timedatectl set-timezone Asia/Kolkata
+   42  sudo timedatectl set-timezone Asia/Kolkata
+   43  date
+   44  clear
+   45  service firewalld status
+   46  wget https://apt.puppetlabs.com/puppet7-release-focal.deb
+   47  wget https://apt.puppetlabs.com/puppet7-release-bionic.deb
+   48  clear
+   49  sudo dpkg -i puppet7-release-bionic.deb 
+   50  sudo apt update
+   51  clear
+   52  sudo apt update
+   53  sudo apt install puppetserver
+   54  service puppet status
+   55  service puppetserver status
+   56  service puppetserver start
+   57  sudo service puppetserver start
+   58  service puppetserver status
+   59  service puppet status
+   60  clear
+   61  cd /etc/puppetlabs/
+   62  ll
+   63  cd puppet
+   64  vi /etc/hosts
+   65  sudo vi /etc/hosts
+   66  ifconfig
+   67  sudo vi /etc/hosts
+   68  clear
+   69  pwd
+   70  ll
+   71  sudo vi puppet.conf 
+   72  cat /etc/hosts
+   73  clear
+   74  ll
+   75  sudo reboot
+   76  clear
+   77  history > puppetserver.history
+   78  cat puppetserver.history 
+   79  git
+   80  git clone https://github.com/ganeshhp/helloworldweb.git
+   81  cp puppetserver.history helloworldweb/.
+   82  vi /etc/puppetlabs/puppet/puppet.conf 
+   83  cat /etc/hosts
+   84  clear
+   85  puppet --version
+   86  cd /etc/puppetlabs/puppetsudo 
+   87  sudo vi /etc/hostname 
+   88  ping puppet
+   89  sudo vi /etc/hosts
+   90  ping puppet
+   91  clear
+   92  sudo su
+   93  puppet agent -t
+   94  service puppetserver status
+   95  service puppetserver start
+   96  sudo service puppetserver start
+   97  service puppetserver status
+   98  sudo service puppetserver enable
+   99  sudo systemctl enable puppetserver
+  100  systemctl status puppetserver
+  101  sudo reboot
+  102  clear
+  103  sudo systemctl status puppetserver
+  104  clear
+  105  cd /etc/puppetlabs/
+  106  ll
+  107  cd code/
+  108  ll
+  109  cd environments/
+  110  ll
+  111  sudo apt install tree
+  112  tree
+  113  cd ../
+  114  tree
+  115  clear
+  116  puppet resource service puppet
+  117  systemctl status puppet
+  118  clear
+  119  puppet resource service puppet
+  120  puppet resource service puppet > puppet-agent.pp
+  121  sudo puppet resource service puppet > puppet-agent.pp
+  122  ll
+  123  cd environments/production/modules/
+  124  ll
+  125  sudo puppet resource service puppet > puppet-agent.pp
+  126  sudo su
+  127  cd ~
+  128  ll
+  129  cd .ansible/
+  130  ll
+  131  ll tmp/
+  132  cd ../..
+  133  cd ubuntu/
+  134  ll
+  135  pwd
+  136  cd ~
+  137  ll
+  138  cd helloworldweb/
+  139  ll
+  140  git status
+  141  history > puppetserver.history 
