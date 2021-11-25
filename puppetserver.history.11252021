@@ -1,0 +1,146 @@
+    1  clear
+    2  /opt/puppetlabs/bin/puppetserver ca list
+    3  /opt/puppetlabs/bin/puppetserver ca list -a
+    4  clear
+    5  puppet
+    6  sudo ln -s /opt/puppetlabs/bin/puppet /usr/bin/puppet
+    7  cd /etc/puppetlabs/code/
+    8  tree
+    9  sudo apt-get install tree 
+   10  clear
+   11  tree
+   12  cd modules/
+   13  motd
+   14  apt install motd
+   15  apt install update-motd
+   16  motd
+   17  apt autoremove  update-motd
+   18  pdk
+   19  cd ../environments/production/
+   20  ll
+   21  vi hiera.yaml 
+   22  cd data/
+   23  ll
+   24  cd ../../..
+   25  cd modules/
+   26  ll
+   27  clear
+   28  systemctl status puppetserver
+   29  systemctl status puppet
+   30  clear
+   31  puppet resource --list
+   32  puppet resource list
+   33  puppet resource service puppet 
+   34  puppet resource service puppet > puppet_service.pp
+   35  puppet apply puppet_service.pp 
+   36  vi puppet_service.pp 
+   37  mv puppet_service.pp /etc/puppetlabs/code/environments/production/modules/.
+   38  cd /etc/puppetlabs/code/
+   39  tree
+   40  cd environments/production/manifests/
+   41  vi nodes.pp
+   42  cd ../../..
+   43  cp -rf environments/production/ environments/development
+   44  clear
+   45  tree
+   46  vi environments/development/manifests/nodes.pp 
+   47  cd ..
+   48  tree
+   49  vi /etc/puppetlabs/code/environments/production/manifests/nodes.pp 
+   50  clear
+   51  tree
+   52  cd puppet
+   53  ll
+   54  cd ssl/
+   55  ll
+   56  cd certs/
+   57  ll
+   58  ll ../private_keys/
+   59  ll ../public_keys/
+   60  clear
+   61  cd ../..
+   62  cd ..
+   63  cd puppetserver/
+   64  ll
+   65  cd ca/
+   66  ll
+   67  ll signed/
+   68  cd ../../
+   69  vi puppet/puppet.conf 
+   70  clear
+   71  puppet agent -t
+   72  vi code/environments/production/modules/puppet_service.pp 
+   73  vi code/environments/production/manifests/nodes.pp 
+   74  puppet agent -t
+   75  cd code/environments/production/modules/
+   76  clear
+   77  apt-get install pdk -y
+   78  pdk
+   79  clear
+   80  pdk new module webserver
+   81  ll
+   82  clear
+   83  ll
+   84  ll webserver/
+   85  mv puppet_service.pp webserver/manifests/.
+   86  vi webserver/manifests/puppet_service.pp 
+   87  mv webserver/manifests/puppet_service.pp webserver/manifests/init.pp
+   88  clea
+   89  clear
+   90  tree
+   91  cd ../..
+   92  vi production/manifests/nodes.pp 
+   93  puppet agent -t
+   94  clear
+   95  puppetserver ca list
+   96  /opt/puppetlabs/bin/puppetserver ca list
+   97  /opt/puppetlabs/bin/puppetserver ca sign --certname node1.us-west1-b.c.causal-folder-333113.internal
+   98  cd /etc/puppetlabs/puppetserver/
+   99  ll
+  100  cd ca/
+  101  ll
+  102  ll requests/
+  103  ll signed/
+  104  clear
+  105  /opt/puppetlabs/bin/puppetserver ca list -a
+  106  vi ../../code/environments/production/manifests/nodes.pp 
+  107  clear
+  108  cd ../../code/
+  109  tree
+  110  cd modules/
+  111  pdk new module motd
+  112  clear
+  113  ll
+  114  cd motd/manifests/
+  115  ll
+  116  vi init.pp
+  117  motd
+  118  apt-get install mtod*
+  119  clear
+  120  apt-get install update_motd
+  121  apt-get install motd_update
+  122  cd ../..
+  123  cd ..
+  124  cd environments/production/modules/
+  125  ll
+  126  cd webserver/
+  127  ll
+  128  cd manifests/
+  129  clear
+  130  ll
+  131  vi lamp.pp
+  132  cd ../..
+  133  cd ..
+  134  cd manifests/
+  135  vi nodes.pp 
+  136  cd ../modules/
+  137  cd webserver/
+  138  cd manifests/
+  139  vi init.pp 
+  140  puppet parser validate init.pp 
+  141  vi init.pp 
+  142  clear
+  143  puppet parser validate init.pp 
+  144  clear
+  145  vi init.pp 
+  146  history > puppetserver.history.11252021
