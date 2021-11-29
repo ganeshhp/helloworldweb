@@ -1,0 +1,91 @@
+    1  clear
+    2  sudo su
+    3  clear
+    4  kubeadm --help
+    5  clear
+    6  kubectl 
+    7  clear
+    8  ll
+    9  sudo su
+   10  clear
+   11  cd ~
+   12  git clone https://github.com/ganeshhp/kubernetes-projects.git
+   13  cd kubernetes-projects/
+   14  cd project/
+   15  clear
+   16  ll
+   17  kubectl run helloworld --image=httpd:latest --dry-run=client -o yaml > helloworld.yml
+   18  ll
+   19  cd ..
+   20  kubectl run helloworld --image=httpd:latest --dry-run=client -o yaml > helloworld.yml
+   21  ll
+   22  cat helloworld.yml 
+   23  kubectl run helloworld --image=httpd:latest --dry-run=server -o yaml > helloworld.yml
+   24  cat helloworld.yml 
+   25  clear
+   26  kubectl run helloworld --image=httpd:latest
+   27  kubectl get pods --namespace=default
+   28  kubectl get pods --all-namespaces
+   29  kubectl get namespaces
+   30  kubectl config  --help
+   31  clear
+   32  kubectl config  --get-clusters
+   33  kubectl config  --get-cluster
+   34  kubectl config  --help
+   35  kubectl config  --helpclear
+   36  clear
+   37  kubectl config  get-clusters
+   38  kubectl config get-contexts
+   39  kubectl config current-context
+   40  kubectl get all -o wide
+   41  kubectl api-resources
+   42  kubectl api-resources --namespaces
+   43  kubectl api-resources --namespaced
+   44  kubectl api-resources --namespaced=true
+   45  kubectl api-resources --namespaced=false
+   46  clear
+   47  kubectl create deployment --image=httpd:latest --replicas=2
+   48  kubectl create deployment helloworld --image=httpd:latest --replicas=2
+   49  kubectl describe deployment.apps/helloworld
+   50  clear
+   51  kubectk get all --namespace=default
+   52  kubectl get all --namespace=default
+   53  kubectl scale deployment hellworld --replicas=4
+   54  kubectl scale deployment helloworld --replicas=4
+   55  kubectl get all --namespace=default
+   56  clear
+   57  kubectl expose deployment helloworld --name=helloworld-svc --target-port=80 --type=NodePort
+   58  kubectl expose deployment helloworld --name=helloworld-svc --target-port=80 --port=32400 --type=NodePort
+   59  kubectl describe service/helloworld-svc
+   60  clear
+   61  kubectl get all
+   62  kubectl delete service/helloworld-svc
+   63  kubectl delete deployment.apps/helloworld
+   64  kubectl create deployment helloworld --image=httpd:latest --replicas=2
+   65  kubectl expose deployment helloworld --name=helloworld-svc --target-port=80 --port=32400 --type=NodePort
+   66  sudo su
+   67  kubectl get all
+   68  kubectl delete service/helloworld-svc
+   69  kubectl expose deployment helloworld --name=helloworld-svc  --port=80 --type=NodePort
+   70  kubectl get all
+   71  clear
+   72  kubectl get all
+   73  clear
+   74  kubectl autoscale --help
+   75  kubectl get deployments
+   76  clear
+   77  kubectl get svcs
+   78  kubectl get svc
+   79  kubectl describe service/helloworld-svc
+   80  clear
+   81  kubectl get nodes
+   82  cd project/
+   83  vi deployment.yml
+   84  clear
+   85  kubectl explain secret
+   86  clear
+   87  kubectl explain secret.stringData
+   88  kubectl explain secret.metadata
+   89  kubectl explain secret.metadata.namespace
+   90  clear
+   91  history
