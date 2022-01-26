@@ -1,26 +1,26 @@
 node ('master') {
-  stage ('checkout') {
+
+    stage ('checkout_scm') {
     checkout([$class: 'GitSCM', 
         branches: [[name: '*/master']], 
         extensions: [], 
-        userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
+        userRemoteConfigs: [[credentialsId: 'github-user', 
+        url: 'https://github.com/ganeshhp/helloworldweb.git']]])\
     }
 
-  stage ('build') {
+    stage ('build') {
     sh 'mvn clean install'
     }
-  stage ('deploy_to_artifactory') {
-    sh 'curl -uuser1:AP3wgCK5cmUdGA9uDryy7drWJrB -T target/Helloworldwebapp-dev.war "https://plussforum.jfrog.io/artifactory/helloworldwebapp-generic-local/Helloworldwebapp-dev.war"'
-   }
 
-  stage ('archive') {
+    stage ('deployToPackageRepo') {
+    sh 'curl -uuser1:AP66t4pw1kd3V2Bky7e5NJJntcr -T ./Helloworldwebapp-dev.war "https://plusf.jfrog.io/artifactory/webapplication/Helloworldwebapp-dev.war"'
+    }
+
+    input 'Proceed with Archival?'
+    
+    stage ('archive') {
     archiveArtifacts artifacts: 'target/Helloworldwebapp-dev.war', 
         followSymlinks: false
     }
 
-  input 'Proceed with Deployment?'
-
-  stage ('deploy') {
-    sh 'cp target/Helloworldwebapp-dev.war /opt/tomcat/webapps/'
-    }
 }
