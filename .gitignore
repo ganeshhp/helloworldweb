@@ -3,4 +3,5 @@
 *.jar
 *.exe
 *.doc
-
+target
+*.war
