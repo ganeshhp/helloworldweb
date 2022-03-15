@@ -17,6 +17,8 @@ node ('master') {
         
   }
   
+  input 'Proceed with Deployment?'
+  
   stage ('deploy-to-artifactory') {
     sh 'curl -uuser1:AP78JGyu7hG9NZr1o4rNbnCQ2MY -T target/Helloworldwebapp-dev.war "https://automationfactory.jfrog.io/artifactory/helloworld/Helloworldwebapp-dev.war"'
   }
