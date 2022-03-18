@@ -4,7 +4,7 @@
 
 	<h2> This is a Test page for demonstrating CI and CD with Jenkins for DevOps Training</h2>
 
-	<h1>!!! Welcome to the DevOps Training conducted on 15th March 2022!!</h1>
+	<h1>!!! Welcome to the DevOps Training conducted on 18th March 2022!!</h1>
 
 
 <form>
