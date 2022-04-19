@@ -15,7 +15,7 @@
         }
         </script>
         
-        <h1>!!! Welcome to the DevOps fundamentals Training on 22nd september 2021!!!</h1>
+        <h1>!!! Welcome to the DevOps fundamentals Training on 20th April 2022!!!</h1>
 	<h2> This is a Test page for demonstrating CI and CD with Jenkins CI Server on cloud</h2>
 <form>
 	First name:<br>
