@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+	<img src="PLUSFORUM-logo.png" alt="plusforum.in" width="104" height="142">
 
         <h1>!!! Welcome to the Jenkins Training on 21st April 2022!!!</h1>
 	<h2> This is a Test page for demonstrating CI and CD with Jenkins CI Server</h2>
