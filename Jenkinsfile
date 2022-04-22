@@ -1,26 +1,33 @@
-node ('master') {
+ def notify(status) {
+   mail bcc: 'ganeshhp@gmail.com', 
+     body: 'check the job status', 
+     subject: "'Job status' ${status}:", 
+     to: 'plusforum.in@gmail.com'
+}
 
-  stage ('checkout') {
+node ('master') {
+  
+  notify('build-started')
+
+  stage ('SCM') {
     checkout([$class: 'GitSCM', 
         branches: [[name: '*/master']], 
         extensions: [], 
         userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
+   }
+  
+  stage ('maven-build') {
+    sh 'mvn clean package'
+   }
+
+  notify('waiting-for-approval')
+
+  input 'Approve for deployment'
+  
+  stage ('deploy') {
+     sh 'curl -uuser1.plusforum:AP5LQczWPvpyUyPd9XWdiLu63W1 -L -O  "https://plusforumm.jfrog.io/artifactory/helloworld/Helloworldwebapp-dev.war"'
+     sh 'cp ./Helloworldwebapp-dev.war /opt/tomcat/webapps/'
+     sh '/opt/tomcat/bin/startup.sh'
   }
   
-  stage ('build') {
-    sh 'mvn clean install'
-  }
-  
-  stage ('archive') {
-    archiveArtifacts artifacts: 'target/Helloworldwebapp-dev.war', 
-        followSymlinks: false
-        
-  }
-  
-  input 'Proceed with Deployment?'
-  
-  stage ('deploy-to-artifactory') {
-    sh 'curl -uuser1:AP78JGyu7hG9NZr1o4rNbnCQ2MY -T target/Helloworldwebapp-dev.war "https://automationfactory.jfrog.io/artifactory/helloworld/Helloworldwebapp-dev.war"'
-  }
-      
-  }
+  notify('build-completed')
