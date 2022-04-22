@@ -31,3 +31,4 @@ node ('master') {
   }
   
   notify('build-completed')
+}
