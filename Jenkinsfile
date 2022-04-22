@@ -11,7 +11,7 @@ node ('master') {
 
   stage ('SCM') {
     checkout([$class: 'GitSCM', 
-        branches: [[name: '*/master']], 
+        branches: [[name: '*/developement']], 
         extensions: [], 
         userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
    }
