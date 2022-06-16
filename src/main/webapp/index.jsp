@@ -3,7 +3,7 @@
 <body>
 	<img src="images/PLUSFORUM-logo.png" alt="plusforum.in" width="104" height="142">
 
-        <h1>!!! Welcome to the DevOps Fundamentals Training on 14th June 2022!!!</h1>
+        <h1>!!! Welcome to the DevOps Fundamentals Training on 16th June 2022!!!</h1>
 	<h2> This is a Test page for demonstrating CI and CD with Jenkins CI Server</h2>
 <form>
 	First name:<br>
