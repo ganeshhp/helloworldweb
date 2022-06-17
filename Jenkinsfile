@@ -1,24 +1,21 @@
 node ('master') {
   
-
-  stage ('SCM') {
+  stage ('SCM_Checkout') {
     checkout([$class: 'GitSCM', 
-        branches: [[name: '*/master']], 
-        extensions: [], 
-        userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
-   }
+       branches: [[name: '*/master']], 
+       extensions: [], 
+       userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
+  }
+
+  stage ('build') {
+    sh 'mvn clean install'
+  }
   
-  stage ('maven-build') {
-    sh 'mvn clean package'
-   }
-
-
-  input 'Proceed With Archival'
+ input 'Proceed with Archive?'
 
   stage ('archive') {
     archiveArtifacts artifacts: 'target/Helloworldwebapp-dev.war', 
-      followSymlinks: false
+       followSymlinks: false
   }
-
+    
 }
- 
