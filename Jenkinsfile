@@ -1,25 +1,21 @@
 node ('master') {
-
-  stage ('scm_checkout') {
+  stage ('SCM') {
     checkout([$class: 'GitSCM', 
-      branches: [[name: '*/master']], 
-      extensions: [], 
-      userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
+        branches: [[name: '*/master']], 
+        extensions: [], 
+        userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
     }
 
-  stage ('app_build') {
+  stage ('build') {
     sh 'mvn clean install'
-    }
+  }
+  
+  emailext body: 'Approve the deployment request', subject: 'Approval', to: 'abc@gmail.com'
 
-    input 'Proceed with deployment?'
+  input 'Proceed with Deployment to Artifactory?'
 
-  stage ('deploy_to_artifactory') {  
-    sh '''curl -uuser1:APe8TNpyXKCb8VLuunDCEJab2 -T target/Helloworldwebapp-dev.war "https://ganeshpalnitkar.jfrog.io/artifactory/web-project/Helloworldwebapp-dev.war"
-    '''
-    }
-
-  stage ('archive') {
-    archiveArtifacts artifacts: 'target/Helloworldwebapp-dev.war', followSymlinks: false
-    }
+  stage ('artifactory') {
+    sh '''curl -uuser1:APe8TNpyXKCb8VLuunDCEJcab2 -T target/Helloworldwebapp-dev.war "https://ganeshpalnitkar.jfrog.io/artifactory/webapp-package/Helloworldwebapp-dev.war"'''
+  }
 
 }
