@@ -4,4 +4,4 @@
 *.exe
 *.doc
 target
-
+*.war
