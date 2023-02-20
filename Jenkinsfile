@@ -1,7 +1,7 @@
 node ('master') {
   stage ('SCM') {
     checkout([$class: 'GitSCM', 
-        branches: [[name: '*/master']], 
+        branches: [[name: '*/developement']], 
         extensions: [], 
         userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']]])
     }
@@ -18,4 +18,5 @@ node ('master') {
     sh '''curl -uuser1:APe8TNpyXKCb8VLuunDCEJcab2 -T target/Helloworldwebapp-dev.war "https://ganeshpalnitkar.jfrog.io/artifactory/webapp-package/Helloworldwebapp-dev.war"'''
   }
 
+  notify('build-completed')
 }
