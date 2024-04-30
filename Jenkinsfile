@@ -1,4 +1,4 @@
-node ('master') {
+node ('build_server') {
     
   stage ('scm'){    
     checkout scmGit(branches: 
