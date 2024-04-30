@@ -9,7 +9,9 @@ node ('master') {
   stage ('app_build'){
     sh 'mvn clean install'
   }
-  
+
+  input 'provide approval for archiving'
+    
   stage ('archive') {
     archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
   }
