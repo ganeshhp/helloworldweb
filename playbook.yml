@@ -6,7 +6,7 @@
   tasks:
     - file: name=petclinic.war state=absent
       name: "clear the environment"
-    - command: 'curl -uganeshhp@gmail.com:cmVmdGtuOjAxOjE3NTM5MzkxMzI6WjJLUjhnaGVrS0MxOTNkVnplTDVwZmE5R0dn -L -O "https:/>
+    - command: 'curl -uganeshhp@gmail.com:cmVmdGtuOjAxOjE3NTM5MzkxMzI6WjJLUjhnaGVrS0MxOTNkVnplTDVwZmE5R0dn -L -O "https://ganesh310724.jfrog.io/artifactory/project10-generic-local/petclinic.war"'
       name: "download package from artifactory server"
 
 - become: true
