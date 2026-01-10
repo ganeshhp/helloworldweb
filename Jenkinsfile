@@ -5,7 +5,12 @@ node ('master') {
       [[name: '*/master']], extensions: [], 
       userRemoteConfigs: [[url: 'https://github.com/ganeshhp/helloworldweb.git']])
   }
-  
+
+
+  stage ('build') {
+    bat 'mvn clean test'
+  }
+
   stage ('app_build'){
     sh 'mvn clean install'
   }
