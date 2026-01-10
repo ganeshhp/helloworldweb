@@ -1,0 +1,14 @@
+- become: true
+  gather_facts: false
+  hosts: localhost
+  remote_user: ubuntu
+  connection: local
+  tasks:
+    - file: name=petclinic.war state=absent
+      name: "clear the environment"
+    - command: 'curl -uganeshhp@gmail.com:cmVmdGtuOjAxOjE3NTM5MzkxMzI6WjJLUjhnaGVrS0MxOTNkVnplTDVwZmE5R0dn -L -O "https://ganesh310724.jfrog.io/artifactory/project10-generic-local/petclinic.war"'
+      name: "download package from artifactory server"
+    - copy: dest=/opt/tomcat/webapps/petclinic.war src=/home/ubuntu/jenkins/workspace/deploy_07312024/petclinic.war
+      name: "deploy war file to server"
+    - command: "sh /opt/tomcat/bin/catalina.sh start"
+      name: "restart app server"

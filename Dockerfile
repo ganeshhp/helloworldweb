@@ -1,5 +1,5 @@
-FROM ganeshhp/tomcat9:custom
+FROM ganeshhp/tomcat:10.0.13
 
-ADD ./Helloworldwebapp.war /opt/tomcat/webapps/
+ADD ./Helloworldwebapp-dev.war /opt/tomcat/webapps/
 
 

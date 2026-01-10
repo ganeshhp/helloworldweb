@@ -1,7 +1,7 @@
-target
 *.log
 *.bin
 *.jar
 *.exe
 *.doc
+target
 
