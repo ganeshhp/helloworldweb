@@ -11,7 +11,7 @@ node ('buildserver') {
   }
 
   stage ('build') {
-    bat 'mvn clean package'
+    bat 'mvn clean test'
   }
 
   stage ('deploy_to_artifactory') {
