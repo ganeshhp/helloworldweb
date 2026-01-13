@@ -1,4 +1,4 @@
-name: Java Maven CI/CD Pipeline (Matrix)
+name: Java Maven CI/CD Pipeline-Matrix
 on:
   push:
     branches:
