@@ -1,4 +1,4 @@
-name: Java Maven CI/CD Pipeline
+name: Job-dependency
 on:
   push:
     branches:
