@@ -24,3 +24,7 @@ jobs:
       # Step 3: Build using Maven
       - name: Build with Maven
         run: mvn clean compile
+
+      # step 4: Test using Maven
+      - name: package the application
+        run: mvn clean package -DskipTests
