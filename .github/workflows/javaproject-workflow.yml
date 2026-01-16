@@ -23,4 +23,16 @@ jobs:
 
       # Step 3: Build using Maven
       - name: Build with Maven
-        run: mvn clean compile
+        run: mvn clean test
+
+
+      # step 4: Test using Maven
+      - name: package the application
+        run: mvn clean package -DskipTests
+
+      # Step 5: Upload build artifact (Deploy stage example)
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: helloworldweb-artifact
+          path: target/*.war
