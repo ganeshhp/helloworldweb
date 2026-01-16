@@ -26,68 +26,10 @@ jobs:
         run: mvn clean compile
 
 
-name: Java Maven CI/CD Pipeline*
-on:
-  push:
-    branches:
-      - master
-
-jobs:
-  build-test-deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      # Step 1: Checkout source code
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      # Step 2: Set up Java
-      - name: Set up JDK 8
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: '8'
-          cache: maven
-
-      # Step 3: Build and test using Maven
-      - name: Build and Test with Maven
-        run: mvn clean test
-
       # step 4: Test using Maven
       - name: package the application
         run: mvn clean package -DskipTests
 
-
-name: Java Maven CI/CD Pipeline*
-on:
-  push:
-    branches:
-      - master
-
-jobs:
-  build-test-deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      # Step 1: Checkout source code
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      # Step 2: Set up Java
-      - name: Set up JDK 8
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: '8'
-          cache: maven
-
-      # Step 3: Build and test using Maven
-      - name: Build and Test with Maven
-        run: mvn clean test
-
-      # step 4: Test using Maven
-      - name: package the application
-        run: mvn clean package -DskipTests
 
       # Step 5: Upload build artifact (Deploy stage example)
       - name: Upload build artifact
@@ -97,29 +39,6 @@ jobs:
           path: target/*.war
 
 
-name: Java Maven CI/CD Pipeline*
-on:
-  push:
-    branches:
-      - master
-
-jobs:
-  build-test:
-    runs-on: ubuntu-latest
-    steps:
-      # Step 1: Checkout source code
-      - name: Checkout code
-        uses: actions/checkout@v4
-      # Step 2: Set up Java
-      - name: Set up JDK 8
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: '8'
-          cache: maven
-      # Step 3: Build and test using Maven
-      - name: Build and Test with Maven
-        run: mvn clean test
 
   package-deploy:
     needs: build-test
