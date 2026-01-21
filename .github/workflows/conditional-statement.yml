@@ -1,17 +1,12 @@
-
-name: Java Maven CI/CD Pipeline
-
+name: Java Maven CI/CD Pipeline*
 on:
   push:
     branches:
       - master
 
 jobs:
-
   build-test:
     runs-on: ubuntu-latest
-
-
     steps:
       # Step 1: Checkout source code
       - name: Checkout code
@@ -25,7 +20,7 @@ jobs:
           cache: maven
       # Step 3: Build and test using Maven
       - name: run the step only if branch name is main
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/master'
         run: mvn clean test
 
   package-deploy:
