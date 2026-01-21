@@ -1,0 +1,15 @@
+name: Runner Comparison
+on: [workflow_dispatch]
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - run: uname -a
+  windows:
+    runs-on: windows-latest
+    steps:
+      - run: systeminfo
+  mac:
+    runs-on: macos-latest
+    steps:
+      - run: sw_vers
